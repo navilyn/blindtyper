@@ -1,0 +1,34 @@
+* {
+  margin: 0px;
+  color: var(--text);
+}
+
+body {
+  background-color: var(--background);
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+  z-index: 0;
+}
+
+#hidingObject {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  display: none;
+}
+
+
+button {}
