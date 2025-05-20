@@ -10,21 +10,18 @@
 
 <body>
   <h1 class="text">Blind Typer</h1>
-  <p class="text">- Blind typer is a web tool that's used for typing down thoughts in public settings. If you've ever
-    had an classea
-    that you'd like to remember but are way too embarrased to write down in plain sight, this is a tool for you. Just
-    focus your cursor into the text field and start typing, and BT will automatically start following.</p>
+  <p class="text">- Blind typer is a web tool that's used for typing down thoughts in public settings. If it's something
+    private, or something that you simply don't want to reveal, you can note it down here.</p>
+  <button id="restore">Restore?</button>
   <textarea id="textArea" rows="5" cols="66"></textarea>
 
   <div id="hidingObject">
-    <button id="showButton" onclick="showText()">Reveal text</button>
-    <button id="saveButton" onclick="saveContents()">Save here!</button>
+    <button id="showButton">Reveal text</button>
+    <button id="saveButton">Save here!</button>
   </div>
   <footer>
-    <h1 class="text">IMPORTANT</h1>
-    <p class="text">This website doesn't have auto save, and all the data will be lost upon refreshing. Do try to
-      backup, or to
-      download what you wrote down every once in a while.</p>
   </footer>
-  <script src="./src/index.js"></script>
+  <script src="./src/time.js" type="module"></script>
+  <script src="./src/autosave.js" type="module"></script>
+  <script src="./src/index.js" type="module"></script>
 </body>

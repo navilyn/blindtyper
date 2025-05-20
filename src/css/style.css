@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 * {
-  color: var(--text);
   margin: 0;
 }
 
 body {
+  color: var(--text);
   background-color: var(--background);
   font-family: "Nunito", sans-serif;
   font-weight: 500;
@@ -26,6 +26,7 @@ h1 {
 }
 
 textarea {
+  color: var(--primary-dark);
   display: flex;
   min-width: fit-content;
   margin-left: auto;
