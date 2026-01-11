@@ -10,7 +10,16 @@ body {
   font-family: "Nunito", sans-serif;
   font-weight: 500;
   font-style: italic;
-  padding-top: 10px
+  padding-top: 10px;
+}
+
+#mainContent {
+  display: grid;
+  grid-template-areas:
+    "h h h"
+    "t t t"
+    "e e b"
+    "f f f";
 }
 
 .text {
@@ -25,24 +34,27 @@ h1 {
   color: inherit;
 }
 
-textarea {
+#textArea {
   color: var(--primary-dark);
-  display: flex;
-  min-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  height: 150px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-  resize: none;
-  z-index: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  display: block;
+  margin: auto;
   padding: 10px;
+  grid-area: t;
+  min-height: 30vh;
+  height: max-content;
+  max-height: 50vh;
+  min-width: 60vw;
+  width: max-content;
+  max-width: 70vw;
+  padding: 5%;
+  border: 2px solid var(--bs-link-color);
+  border-radius: 20px;
+  resize: none;
+}
+
+#restoreButton {
+  grid-area: b;
+  justify-self: end;
 }
 
 #hidingObject {
@@ -56,12 +68,12 @@ textarea {
   display: none;
 }
 
-button {
-  margin: 10px;
-  font-size: x-large;
-  color: var(--primary-accent);
-  background-color: var(--primary-beige);
-  border: 2px;
-  border-radius: 10px;
-  border-color: var(--primary-dark)
+div>a {
+  text-decoration: none;
+  color: black;
+}
+
+footer~h5 {
+  font-size: 12px;
+  color: darkgray;
 }

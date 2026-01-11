@@ -8,7 +8,24 @@ const saveButton    = document.querySelector("#saveButton");
 import * as save from './autosave.js';
 import * as time from './time.js';
 
-// holy hell do I hate event listeners
+document.addEventListener("DOMContentLoaded", function () {
+  const modalEl = document.getElementById("introModal");
+  const dismissBtn = document.getElementById("dismissIntroModal");
+  const modal = new bootstrap.Modal(modalEl);
+
+  if (!localStorage.getItem("introShown")) {
+    modal.show();
+  }
+
+  dismissBtn.addEventListener("click", function () {
+    modal.hide();      localStorage.setItem("introShown", "true");
+  });
+
+  modalEl.addEventListener("hidden.bs.modal", function () {
+    localStorage.setItem("introShown", "true");
+  });
+});
+
 textArea.addEventListener("focus", () => {
   hidingObj.style.display = "block";
 });

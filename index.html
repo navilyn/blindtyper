@@ -1,27 +1,90 @@
 <!DOCTYPE html>
 
+<html>
+
 <head>
+  <title>Blindtype</title>
   <meta charset="UTF-8">
   <meta name="author" content="navilyn">
   <link rel="stylesheet" href="src/css/colours.css">
   <link rel="stylesheet" href="./src/css/style.css">
-  <link rel="icon" src="./src/img/icon.ico">
+  <link rel="icon" href="./src/img/icon.ico">
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/ca1d92cc7a.js" crossorigin="anonymous"></script>
+
+  <!-- Google fonts "inter" -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
 </head>
 
 <body>
-  <h1 class="text">Blind Typer</h1>
-  <p class="text">- Blind typer is a web tool that's used for typing down thoughts in public settings. If it's something
-    private, or something that you simply don't want to reveal, you can note it down here.</p>
-  <button id="restore">Restore?</button>
-  <textarea id="textArea" rows="5" cols="66"></textarea>
+  <div id="mainContent">
+    <div class="modal fade" id="introModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Blindtype</h5>
+          </div>
+          <div class="modal-body">
+            <p>This tiny tool is used for writing down sensitive information in public by obfuscating the text for any
+              shoulder peekers.</p>
+            <ul>
+              <li>Your drafts are saved in the browser's <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" target="_blank">local
+                  storage</a>.</li>
+              <li>No data leaves your machine.</li>
+              <li>This is a proof of concept, and all issues should be reported <a href="placeholder">here</a>.</li>
+              <!-- TODO: connect the href to an actual github issues page -->
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <!-- This button will dismiss AND record -->
+            <button type="button" class="btn btn-primary" id="dismissIntroModal">
+              Let's go
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div id="hidingObject">
-    <button id="showButton">Reveal text</button>
-    <button id="saveButton">Save here!</button>
+    <button id="helpBtn" class="btn btn-sm btn-outline-secondary position-fixed bottom-0 end-0 m-3"
+      style="z-index: 1000;">
+      <i class="fas fa-question"></i>
+    </button>
+
+    <textarea id="textArea" rows="5" cols="66"></textarea>
+
+    <button type="button" id="restoreButton" class="btn btn-primary">Restore?</button>
+
+    <div id="hidingObject">
+      <button class="btn btn-primary" id="showButton">Reveal text</button>
+      <button class="btn btn-primary" id="saveButton">Save here!</button>
+    </div>
   </div>
   <footer>
+    <div id="socialLinks">
+      <h5>Please feel free to use the following links to contact me.</h5><a href="placeholder_github" target="_blank"><i
+          class="fa-brands fa-github"></i></a><a href="mailto:jovanlukic180@gmail.com"><i
+          class="fa-solid fa-envelope"></i></a>
+    </div>
   </footer>
   <script src="./src/time.js" type="module"></script>
   <script src="./src/autosave.js" type="module"></script>
   <script src="./src/index.js" type="module"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
+</html>

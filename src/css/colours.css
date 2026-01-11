@@ -6,3 +6,14 @@
   --primary-beige: #DFB6B2;
   --text: #FBE4D8;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #190019;
+    --primary-dark: #2B124C;
+    --primary-accent: #522B5B;
+    --primary-light: #854F6C;
+    --primary-beige: #DFB6B2;
+    --text: #FBE4D8;
+  }
+}
